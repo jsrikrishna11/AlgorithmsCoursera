@@ -18,7 +18,15 @@ class AdjList{
 public class ElementaryGraphs {
     static boolean[][] mapAdj;
     static int _len;
+    static int[] visited;
+    static int now;
+    static void displayArray(int[] array){
+        for( int i = 0; i<_len; i++) {
 
+            System.out.print(array[i]);
+            System.out.print(", ");
+        }
+    }
     static void initAdj(int nVertices){
         _len = nVertices;
         mapAdj = new boolean[nVertices][nVertices];
@@ -27,6 +35,11 @@ public class ElementaryGraphs {
                 mapAdj[i][j]= i==j? true:false;
             }
         }
+        visited = new int[_len];
+        for(int i=0 ; i< nVertices; i++){
+            visited[i] = 0;
+        }
+        now=0;
     }
     static void displayMap(){
         System.out.print("\t ");
@@ -49,16 +62,36 @@ public class ElementaryGraphs {
         mapAdj[vA][vB]= true;
         mapAdj[vB][vA]=true;
     }
+    static void visit(int vertex){
+        now = now+1;
+        visited[vertex]=now;
+        System.out.println(vertex);
+        for(int i=0; i<_len; i ++){
+            if(mapAdj[vertex][i]) {
+                if(visited[i]==0) {
+                    visit(i);
+                }
+            }
+        }
+        
+    }
     public static void main(String args[]){
-        initAdj(5);
-        connect(1,3);
-        displayMap();
-        //Adjacency list.
         int nV = 7;
-        AdjList first = new AdjList(1,nV);
-        AdjList temp = new AdjList(2,nV);
-        first.connect(temp);
+        initAdj(nV);
+        //Adjacency list.
+        connect(0,5);
+        connect(0,6);
+        connect(1,2);
+        connect(2,3);
+        connect(2,4);
+        displayMap();
+        for(int i = 0 ; i< _len; i++){
+            if(visited[i]==0){
+                visit(i);
+            }
 
-        System.out.print("Done!");
+        }
+        displayArray(visited);
+
     }
 }

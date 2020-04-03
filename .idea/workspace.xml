@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5945ede8-5213-451f-ab23-437d3d06b8a2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ElementaryGraphs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmsCoursera-Part1/UnionFind.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmsCoursera-Part1/UnionFind.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnionFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElementaryGraphs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElementaryGraphs.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +18,14 @@
       <file leaf-file-name="ElementaryGraphs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ElementaryGraphs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="297">
+              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+              <folding>
+                <element signature="class#AdjList#0" />
+                <element signature="method#initAdj#0;class#ElementaryGraphs#0" />
+                <element signature="method#displayMap#0;class#ElementaryGraphs#0" />
+                <element signature="method#connect#0;class#ElementaryGraphs#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,10 +51,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="2586" />
-    <option name="height" value="1466" />
+    <option name="x" value="82" />
+    <option name="y" value="-18" />
+    <option name="width" value="2520" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,17 +190,17 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.37216577" />
+      <window_info active="true" id="Run" order="7" visible="true" weight="0.35496482" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32937685" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.089913994" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.12197029" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.39910978" />
+      <window_info anchor="bottom" id="Debug" order="6" visible="true" weight="0.39910978" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -237,7 +241,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="29" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -257,8 +261,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ElementaryGraphs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="297">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <folding>
+            <element signature="class#AdjList#0" />
+            <element signature="method#initAdj#0;class#ElementaryGraphs#0" />
+            <element signature="method#displayMap#0;class#ElementaryGraphs#0" />
+            <element signature="method#connect#0;class#ElementaryGraphs#0" />
+          </folding>
         </state>
       </provider>
     </entry>
