@@ -73,7 +73,7 @@ public class ElementaryGraphs {
                 }
             }
         }
-        
+
     }
     public static void main(String args[]){
         int nV = 7;
