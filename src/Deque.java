@@ -4,16 +4,16 @@ import java.util.NoSuchElementException;
 
 public class Deque<T> implements Iterable<T> {
     private int size;
-    private class Node<T> {
+    private class Node {
         T data;
-        Node<T> next, prev;
+        Node next, prev;
         Node(final T d){
             this.data = d;
             this.next = null;
             this.prev = null;
         }
     }
-    Node<T> first, last;
+    Node first, last;
     public Deque(){
         first = null;
         last = null;
@@ -23,7 +23,7 @@ public class Deque<T> implements Iterable<T> {
     public Iterator<T> iterator(){ return new litr();}
 
     private class litr implements Iterator<T>{
-        private Node<T> current;
+        private Node  current;
         
         litr(){
             current = first;
@@ -54,7 +54,7 @@ public class Deque<T> implements Iterable<T> {
     public void addFirst(final T item){
         if(item == null) throw new IllegalArgumentException();
         size++;
-        final Node<T> n = new Node<T>(item);
+        final Node n = new Node(item);
         if(size == 1){
             first = n;
             last = n;
@@ -69,7 +69,7 @@ public class Deque<T> implements Iterable<T> {
     public void addLast(final T item){
         if(item == null) throw new IllegalArgumentException();
         size++;
-        final Node<T> n = new Node<T>(item);
+        final Node n = new Node(item);
         if(size == 1){
             first = n;
             last = n;
@@ -84,7 +84,7 @@ public class Deque<T> implements Iterable<T> {
     public T removeFirst(){
         if(!this.isEmpty()){
             this.size--;
-            final Node<T> temp = first;
+            final Node temp = first;
             first = first.next;
             temp.next = null;
             first.prev = null;
@@ -96,7 +96,7 @@ public class Deque<T> implements Iterable<T> {
     public T removeLast(){
         if(!this.isEmpty()){
             this.size--;
-            final Node<T> temp = last;
+            final Node temp = last;
             last = last.prev;
             temp.prev = null;
             last.next = null;
