@@ -4,28 +4,34 @@ import java.util.NoSuchElementException;
 
 public class Deque<T> implements Iterable<T> {
     private int size;
+
     private class Node {
         T data;
         Node next, prev;
-        Node(final T d){
+
+        Node(final T d) {
             this.data = d;
             this.next = null;
             this.prev = null;
         }
     }
-    Node first, last;
-    public Deque(){
+
+    private Node first, last;
+
+    Deque() {
         first = null;
         last = null;
         size = 0;
     }
-    
-    public Iterator<T> iterator(){ return new litr();}
 
-    private class litr implements Iterator<T>{
-        private Node  current;
-        
-        litr(){
+    public Iterator<T> iterator() {
+        return new litr();
+    }
+
+    private class litr implements Iterator<T> {
+        private Node current;
+
+        litr() {
             current = first;
         }
 
@@ -36,44 +42,43 @@ public class Deque<T> implements Iterable<T> {
 
         @Override
         public T next() {
-            if(!this.hasNext()) throw new NoSuchElementException();
+            if (!this.hasNext()) throw new NoSuchElementException();
             final T temp = current.data;
             current = current.next;
             return temp;
-        }  
+        }
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return first == last;
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
-    public void addFirst(final T item){
-        if(item == null) throw new IllegalArgumentException();
+    private void addFirst(final T item) {
+        if (item == null) throw new IllegalArgumentException();
         size++;
         final Node n = new Node(item);
-        if(size == 1){
+        if (size == 1) {
             first = n;
             last = n;
-        }
-        else{
+        } else {
             first.prev = n;
             n.next = first;
             first = n;
         }
     }
 
-    public void addLast(final T item){
-        if(item == null) throw new IllegalArgumentException();
+    private void addLast(final T item) {
+        if (item == null) throw new IllegalArgumentException();
         size++;
         final Node n = new Node(item);
-        if(size == 1){
+        if (size == 1) {
             first = n;
             last = n;
-        }else{
+        } else {
             last.next = n;
             n.prev = last;
             last = n;
@@ -81,8 +86,8 @@ public class Deque<T> implements Iterable<T> {
 
     }
 
-    public T removeFirst(){
-        if(!this.isEmpty()){
+    public T removeFirst() {
+        if (!this.isEmpty()) {
             this.size--;
             final Node temp = first;
             first = first.next;
@@ -93,8 +98,8 @@ public class Deque<T> implements Iterable<T> {
         throw new NoSuchElementException();
     }
 
-    public T removeLast(){
-        if(!this.isEmpty()){
+    public T removeLast() {
+        if (!this.isEmpty()) {
             this.size--;
             final Node temp = last;
             last = last.prev;
@@ -103,5 +108,18 @@ public class Deque<T> implements Iterable<T> {
             return temp.data;
         }
         throw new NoSuchElementException();
+    }
+
+    public static void main(String[] args) {
+        Deque<Integer> q = new Deque<Integer>();
+        q.addFirst(1);
+        q.addFirst(3);
+        q.addLast(5);
+        q.addLast(6);
+        q.removeFirst();
+        q.removeLast();
+        for (int i : q) {
+            System.out.println(i);
+        }
     }
 }
